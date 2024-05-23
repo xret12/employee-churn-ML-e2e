@@ -3,6 +3,7 @@ from flask import Flask, request, render_template
 from flask import Response
 from flask_cors import CORS, cross_origin
 
+from apps.core.config import Config
 
 app = Flask(__name__)
 CORS(app)
@@ -12,6 +13,14 @@ CORS(app)
 def training_route_client():
 
     try:
+        config = Config()
+        # get run id
+        run_id = config.get_run_id()
+        data_path = config.training_data_path
+        # initalize TrainModel Object
+        
+
+    
         return Response("Training successful!")
     except ValueError:
         return Response("Error Occurred! %s" % ValueError)
