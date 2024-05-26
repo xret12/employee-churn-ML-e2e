@@ -90,6 +90,8 @@ class ModelTuner:
                 self.logger.info('XGBoost best params: %s' % str(self.grid.best_params_))
                 self.logger.info('End of finding best params for XGBoost...')
 
+                return self.xgb
+
             except Exception as e:
                 self.logger.exception('Exception raised while finding best params for XGBoost: %s' % e)
                 raise e

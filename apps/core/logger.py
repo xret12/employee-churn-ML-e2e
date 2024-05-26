@@ -5,7 +5,7 @@ import logging
 class Logger:
 
     def __init__(self, run_id, log_module, log_file_name):
-        self.logger = logging.getLogger(str(log_module)) + '_' + str(run_id)
+        self.logger = logging.getLogger(str(log_module) + '_' + str(run_id))
         self.logger.setLevel(logging.DEBUG)
 
         if log_file_name == 'training':

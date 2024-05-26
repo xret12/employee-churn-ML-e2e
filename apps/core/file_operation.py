@@ -19,6 +19,7 @@ class FileOperation:
 
             if os.path.isdir(path): # remove existing models for each cluster
                 shutil.rmtree('apps/models')
+                os.makedirs(path)
             else:
                 os.makedirs(path)
 

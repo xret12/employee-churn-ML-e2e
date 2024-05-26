@@ -26,7 +26,7 @@ class DatabaseOperation:
 
     def create_table(self, database_name, table_name, column_names):
         try:
-            self.logger('Start of creating table...')
+            self.logger.info('Start of creating table...')
             conn = self.database_connection(database_name)
 
             if database_name == 'prediction':

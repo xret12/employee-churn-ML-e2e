@@ -18,6 +18,8 @@ class Preprocessor:
             self.logger.info('Start of reading dataset...')
             self.data = pd.read_csv(f'{self.data_path}_validation/InputFile.csv')
             self.logger.info('End of reading dataset....')
+            return self.data
+
         except Exception as e:
             self.logger.exception('Exception rasied while reading dataset: %s' % e)
             raise e
@@ -70,6 +72,8 @@ class Preprocessor:
             self.new_data = pd.DataFrame(data=arr, columns = self.data.columns)
             
             self.logger.info('End of imputing missing values...')
+
+            return self.new_data
 
         except Exception as e:
             self.logger.exception('Exception raised while imputing missing values: %s' % e)
