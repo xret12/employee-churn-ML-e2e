@@ -15,7 +15,7 @@ class DatabaseOperation:
 
     def database_connection(self, database_name):
         try:
-            conn = sqlite3.connect('apps/database' + database_name + '.db')
+            conn = sqlite3.connect('apps/database/' + database_name + '.db')
             self.logger.info('Opened %s database successfully' % database_name)
 
         except ConnectionError as ce:

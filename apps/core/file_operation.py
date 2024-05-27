@@ -31,20 +31,20 @@ class FileOperation:
 
         except Exception as e:
             self.logger.exception('Exception raised while saving model: %s' % e)
-            raise Exception()
+            raise e
         
     
     def load_model(self, file_name):
         try:
             self.logger.info('Start of Load Model')
-            with open('apps/model' + file_name + '/' + file_name + '.sav', 'rb') as f:
+            with open('apps/models/' + file_name + '/' + file_name + '.sav', 'rb') as f:
                 self.logger.info('Model File: ' + file_name + ' loaded')
                 self.logger.info('End of Load Model')
                 return pickle.load(f)
             
         except Exception as e:
             self.logger.exception('Exception raised while loading model: %s' % e)
-            raise Exception()
+            raise e
         
 
     def correct_model(self, cluster_number):
@@ -68,4 +68,4 @@ class FileOperation:
                 
         except Exception as e:
             self.logger.exception('Exception raised while finding correct model: %s' % e)
-            raise Exception()
+            raise e

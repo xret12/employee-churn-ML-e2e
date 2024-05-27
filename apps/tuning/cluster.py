@@ -35,7 +35,7 @@ class KMeansCluster:
             plt.xlabel('Number of Clusters')
             plt.ylabel('WCSS')
 
-            save_path = 'app/models'
+            save_path = 'apps/models'
             plt.savefig(f'{save_path}/kmeans_elbow.png')
 
             # find the optimum cluster count

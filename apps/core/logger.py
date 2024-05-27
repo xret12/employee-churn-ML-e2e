@@ -1,6 +1,6 @@
 from datetime import datetime
 import logging
-
+import os
 
 class Logger:
 
@@ -9,9 +9,13 @@ class Logger:
         self.logger.setLevel(logging.DEBUG)
 
         if log_file_name == 'training':
-            file_handler = logging.FileHandler('logs/training_logs.train_log_' + str(run_id) + '.log')
+            path = 'logs/training_logs'
+            os.makedirs(path, exist_ok=True)
+            file_handler = logging.FileHandler(path + '/train_log_' + str(run_id) + '.log')
         else:
-            file_handler = logging.FileHandler('logs/preidiction_logs.predict_log_' + str(run_id) + '.log')
+            path = 'logs/prediction_logs'
+            os.makedirs(path, exist_ok=True)
+            file_handler = logging.FileHandler(path + '/predict_log_' + str(run_id) + '.log')
 
         formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
         file_handler.setFormatter(formatter)

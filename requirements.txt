@@ -1,11 +1,11 @@
 Flask==1.1.1 # flask lib
 Flask-Cors==3.0.8 #A Flask extension for handling Cross Origin Resource Sharing (CORS), making cross-origin AJAX possible
-matplotlib #==3.1.2 #matplotlib
-numpy #==1.18.1 #numpy
-pandas #==0.25.3 # pandas
-scikit-learn #==0.22.1 # to get model lib
+matplotlib ==3.9.0 #matplotlib
+numpy ==1.26.4 #numpy
+pandas ==2.2.2 # pandas
+scikit-learn ==1.4.2 # to get model lib
 kneed==0.5.1 #elbow plot
-xgboost #==1.0.2 #pip install xgboost-1.0.2-cp36-cp36m-win32.whl
+xgboost ==2.0.3 #pip install xgboost-1.0.2-cp36-cp36m-win32.whl
 Flask-MonitoringDashboard==3.0.6 # flask app monitor dashboard
 Jinja2==2.11.0 #Flask is based on the Jinja2 template engine
 Werkzeug==0.16.1 #Flask is based on the Werkzeug WSGI toolkit
